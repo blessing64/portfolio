@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block main %}
+<a style="background-color: gray;" href="{% url 'projects' %}"> Back</a>
+<br><br>
+<div>
+    {{singleproject.name}}
+    <img src="{{singleproject.image.url}}" style="width: 100%; height: 400px; object-fit: cover;" alt="{{singleproject.name}}">
+
+
+    <h1>
+    {{singleproject.name}}
+    </h1>
+    <p>{{singleproject.name}}</p>
+    <a style="background-color: gray;"  href="{{singleproject.url}}">View Project</a>
+<b>
+{%  if user.is_authenticated and user.is_superuser %}
+    <form action="{% url 'delete_project' singleproject.pk %}" method="post">   
+        {% csrf_token %}
+        <button>delete</button>
+    </form>    
+    
+    {% endif %}
+
+
+</div>
+{% endblock main %}

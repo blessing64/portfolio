@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <h1 style="text-align: center; margin-bottom: 60px;">Get in Touch </h1>
+<form style="width: 40%; margin: 10px auto; padding: 20px; border: 2px solid whitesmoke; box-shadow: 50px;">
+
+    <label for="name" style="display: block; margin-bottom: 10px; font-weight: bold;">Name:</label>
+
+    <input type="text" id="name" name="name" placeholder="Enter your name" style="width: 100% ; height: 50px; margin-bottom: 20px;padding: 10px;border: 1px solid white;border-radius: 5px;"> 
+
+    <label for="email"style="display: block; margin-bottom: 10px; font-weight: bold;">Email:</label>
+    <input type="email" name="email" id=" email" placeholder="Enter your email" style="width: 100% ; height: 50px; margin-bottom: 20px;padding: 10px;border: 1px solid white;border-radius: 5px;" >
+
+    <label for="message"style="display: block; margin-bottom: 10px; font-weight: bold;" >Message:</label>
+    <textarea name="message" id="message" placeholder="Enter your message" style="width: 100%; height: 50px; margin-bottom: 20px; padding: 10px; border:1px solid  white; resize: vertical;"></textarea>
+
+    <input type="submit" value="Send" style="width: 100%; height: 40px; ; color: black; border: none; border-radius: 5px; cursor: pointer;">
+</form>    
+
+{% endblock main %}

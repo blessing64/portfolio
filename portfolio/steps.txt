@@ -1,0 +1,20 @@
+
+(1) install the psycopg2 using pip install psycopg2
+(2)install the dj-database-url using pip install dj-database-url
+(3)then go to setting.py at the top import dj-database-url
+(4)then scroll to the section  where you see database and write this line 
+DATABASE["default"] = dj_database_url.parse("")
+
+(5) open an account with render and create a postgresql database by clicking  on it from  the dashboard, give it a name and then  create.
+(6) click on  the connection button on the top right corner and click external then copy  the connection string
+(7) paste the connection string into the .parse("here")method
+(8) go back to your project terminal and run "py manage.py migrate
+
+command for creation django virtual environment is -m venv .venv
+then ./.venv/Scripts/activate
+then go to power- shell  you can right or check run as administrator
+set-Executionpolicy RemoteSigned
+then install djano using pip install django 
+then django-admin startproject portfolio .
+then install project using python manage.py startapp
+create a template in the folder then bring it to  setting .py in porfolio

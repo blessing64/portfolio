@@ -1,0 +1,16 @@
+{% extends 'layout.html'%}
+
+{% block main %}
+<div class="important-stage">
+<h1>project landing page</h1>
+{% for project in my_project %}
+<h3>{{project.name}}</h3>
+
+<a href={{project.url}} target="_blank">check live site</a>
+<img src="{{project.image.url}}"  width="300px" alt="{{project.name}}">
+
+<a style="background-color: blue;" href=" {% url 'detail_project' pk=project.pk %}">read more</a>
+{% endfor %}
+</div>
+
+{% endblock main %}

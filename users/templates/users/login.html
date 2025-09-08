@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="login-page" >
+<h1 style="margin-bottom: 20px; text-align: center;">Login in to your account </h1>
+ <form action="{% url 'login'%}" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submtoit" class="btn-login" >Login</button>
+
+</form>
+<div class="register-link">
+<span >
+    Don't have an account?
+    <a  href="{% url 'signup'%}" style="color: brown;"> Register here</a>
+
+</span>
+</div>
+</div>
+
+
+
+{% endblock main %}
