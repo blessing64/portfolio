@@ -8,9 +8,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href=" {% static 'https://cdngs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'%}">
     <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
 </head>
-<body>
+<body class="layout">
     <header>
         <nav>
         <div>Blessing</div>
@@ -19,8 +20,10 @@
         <li><a href="{% url 'about'%}">About</a></li>
         <li><a href="{% url 'contact'%}">Contact</a></li>
         <li><a href="{% url 'projects'%}">Project</a></li>
+    {% if user.is_super %}
+    <li><a href="{% url 'add_project' %}">Add</a></li>
     
-        <li><a href="{% url 'add_project' %}">Add</a></li>
+    {% endif %}
         
         
         <!-- if  user is logged in show just the logout button else show login or signup button-->
@@ -48,7 +51,27 @@
             <h1>default</h1>
         {% endblock main %} 
     </main>
-    <footer>
+ 
+    <footer class="footer">
+        <div class="foooter-content">
+            <div class="social-icon">
+                <a href="https://www.instagram.com" target="_blank" class="icon instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkdeln.com" target="_blank" class="icon linkdeln " aria-label="Linkdeln">
+                    <i class="fab fa-linkdeln"></i>
+                </a>
+                <a href="/documents/resume.pdf" target="_blank" class="icon document" aria-label="Document">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+
+            </div>
+        
+            <p class="right-text"> &copy;2025  Shaibu blessing. All rights reserved.</p>
+
+            </div>
     </footer>
+    
+
 </body>
 </html>
