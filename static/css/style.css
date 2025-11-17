@@ -31,7 +31,7 @@ a {
     color:black ;
     padding: 5px 10px;
     &:hover {
-        background-color: #d8d800;
+        background-color :#d34b96;
         color: #f690c8;
         color: #fff;
     }
@@ -50,11 +50,6 @@ a {
     margin-top: 80px;
 
 }
-.image_section {
-    
-    
-
-}
 
 .button-container {
     display: flex;
@@ -62,8 +57,7 @@ a {
     margin-top: 5px;
     
 }
-.header{
-    text-decoration: underline ;
+.header {
     margin-top: 200px;
     margin-bottom: 10px;
     text-align: star
@@ -73,19 +67,20 @@ a {
     flex-direction: row;
 } 
 
-
 .about_section {
     font-size: 20px;
-    padding: 20px;
-    margin: auto;
+    padding: 40px;
+    font-weight: 500;
+    
 
 }
 .btn_about {
     background-color: rgb(216, 216, 0);
-    color: black;
+    
     border-radius: 20px;
     width: 100px;
     padding: 5px;
+    
 }
 
 .login-page {
@@ -155,37 +150,264 @@ a {
 
 }
     
-.footer{
-    background-color: white;
-    color: black;
-    padding: 10px;
+
+
+
+
+/* Medium desktops and laptops (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about_container {
+    padding: 40px 10%;
+    gap: 30px;
+  }
+
+  .about_image img {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about_container {
+    flex-wrap: wrap;
+    padding: 30px 5%;
+    gap: 25px;
+  }
+
+  .about_image img {
+    width: 300px;
+    height: 350px;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 767px) {
+  .about_container {
+    flex-direction: column;
+    padding: 20px 5%;
+    gap: 20px;
+  }
+
+  .text_section {
     text-align: center;
-    margin-top: auto;
-    
-    bottom: 0;
-    width: 100%;
-    border-radius: 20px;
+  }
+
+  .about_section {
+    font-size: 0.9rem;
+  }
+
+  .btn_about {
+    margin: 20px auto;
+  }
+
+  .about_image img {
+    width: 250px;
+    height: 280px;
+    margin: 0 auto;
+    display: block;
+  }
 }
-.footer-content {
-    max-width: 10px;
-    margin:  20px;
+
+
+
+
+
+
+  
+/* ========== Base Styles (for Desktop First) ========== */
+/* 
+   Write your default styles here — 
+   these will apply to large screens automatically.
+*/
+
+
+/* ========== Large Devices (Desktops & Monitors) ========== */
+@media (min-width: 1200px) {
+  
+  .container {
+    max-width: 1200px;
+  }
+
+  .project-card {
+    max-width: 1000px;
+  }
 }
+
+/* ========== Medium Devices (Laptops/Tablets Landscape) ========== */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .container {
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  .text_section h2 {
+    font-size: 1.8rem;
+  }
+
+  .image-section img {
+    width: 300px;
+    height: 350px;
+  }
+}
+
+/* ========== Tablets (Portrait Mode) ========== */
+@media (max-width: 991px) and (min-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image-section img {
+    width: 280px;
+    height: 280px;
+    margin-top: 20px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .project-text {
+    text-align: center;
+  }
+
+  .header {
+    font-size: 2.2rem;
+  }
+}
+
+/* ========== Mobile Devices (Portrait & Small Tablets) ========== */
+@media (max-width: 767px) {
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .text_section h2 {
+    font-size: 1.5rem;
+  }
+
+  .text_section p {
+    font-size: 1rem;
+  }
+
+  .button-container a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+  }
+
+  .image-section img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+  }
+
+  .project-card {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .project-text p {
+    font-size: 0.95rem;
+  }
+}
+
+
+  
+
+    /* Media Queries for Responsive Design */
+
+    /* Tablets */
+    @media (max-width: 1024px) {
+        form {
+            width: 60%;
+            padding: 15px;
+        }
+    }
+
+    /* Mobile devices */
+    @media (max-width: 768px) {
+        form {
+            width: 80%;
+            padding: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            font-size: 14px;
+            padding: 8px;
+        }
+
+        input[type="submit"] {
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+
+    /* Small phones */
+    @media (max-width: 480px) {
+        form {
+            width: 95%;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+    }
+/* Footer Base Styles */
+.site-footer {
+  background-color: ; /* white background */
+  color: #111; /* dark text for contrast */
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc; /* subtle separation */
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* space between icons */
+  flex-wrap: wrap; /* wrap icons on small screens */
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  display: inline-block;
+}
+
 .social-icon {
-    margin-bottom: 10px;
-
-}
-.social-icon a {
-color: #fff;
-margin: 0 10px;
-font-size: 24px;
-text-decoration: none;
-transition: color 0.3s;
-}
-.social-icon a :hover {
-    color: ida1f2;
-}
-.right-text {
-    font-size: 14px;
-    color: #bbb;
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s, opacity 0.3s;
+  filter: invert(0%); /* keep icons dark on white background */
 }
 
+/* Hover Effect */
+.footer-social a:hover .social-icon {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .footer-text {
+    font-size: 12px;
+  }
+}

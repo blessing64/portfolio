@@ -20,10 +20,10 @@
         <li><a href="{% url 'about'%}">About</a></li>
         <li><a href="{% url 'contact'%}">Contact</a></li>
         <li><a href="{% url 'projects'%}">Project</a></li>
-    {% if user.is_super %}
+    {% if user.is_super%}
     <li><a href="{% url 'add_project' %}">Add</a></li>
-    
     {% endif %}
+    
         
         
         <!-- if  user is logged in show just the logout button else show login or signup button-->
@@ -52,26 +52,27 @@
         {% endblock main %} 
     </main>
  
-    <footer class="footer">
-        <div class="foooter-content">
-            <div class="social-icon">
-                <a href="https://www.instagram.com" target="_blank" class="icon instagram" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkdeln.com" target="_blank" class="icon linkdeln " aria-label="Linkdeln">
-                    <i class="fab fa-linkdeln"></i>
-                </a>
-                <a href="/documents/resume.pdf" target="_blank" class="icon document" aria-label="Document">
-                    <i class="fas fa-file-alt"></i>
-                </a>
+    {% load static %}
 
-            </div>
-        
-            <p class="right-text"> &copy;2025  Shaibu blessing. All rights reserved.</p>
-
-            </div>
-    </footer>
-    
+<footer class="site-footer">
+  <div class="footer-social">
+    <a href="https://instagram.com/yourprofile" target="_blank">
+      <img src="{% static 'images/bx_bxl-instagram-alt.png' %}" alt="Instagram Icon" class="social-icon">
+    </a>
+    <a href="https://twitter.com/yourprofile" target="_blank">
+      <img src="{% static 'images/akar-icons_twitter-fill.png' %}" alt="Twitter Icon" class="social-icon">
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+      <img src="{% static 'images/cib_linkedin-in.png' %}" alt="LinkedIn Icon" class="social-icon">
+    </a>
+    <a href="mailto:your.email@example.com">
+      <img src="{% static 'images/cib_facebook-f.png '%}" alt="Email Icon" class="social-icon">
+    </a>
+  </div>
+  <div class="footer-text">
+    &copy; 2025 Shaibu Blessing. All Rights Reserved.
+  </div>
+</footer>
 
 </body>
 </html>
